@@ -1,6 +1,4 @@
-import 'package:newsapi/object/apinewsindo.dart';
-
-List<Map> listNegara = [
+List<Map<String, String>> listNegara = [
   {
     'negara': 'argentina',
     'kode': 'ar',
@@ -326,5 +324,3 @@ List<Map> listNegara = [
         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/800px-Flag_of_Venezuela.svg.png',
   },
 ];
-
-List<Data> listData = [];

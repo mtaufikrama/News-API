@@ -1,6 +1,7 @@
 import 'package:dismissible_page/dismissible_page.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
+import 'package:newsapi/services/download.dart';
 import 'package:newsapi/services/launcher.dart';
 
 class ImagePage extends StatelessWidget {
@@ -53,10 +54,13 @@ class ImagePage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.8,
                   child: Hero(
                     tag: tag,
-                    child: Image.network(
-                      imageUrl,
-                      fit: BoxFit.contain,
-                      // fitWeb: BoxFitWeb.contain,
+                    child: GestureDetector(
+                      onTap: () => downloadFile(imageUrl),
+                      child: Image.network(
+                        imageUrl,
+                        fit: BoxFit.contain,
+                        // fitWeb: BoxFitWeb.contain,
+                      ),
                     ),
                     // ImageNetwork(
                     //   image: imageUrl,
